@@ -1,0 +1,17 @@
+type: code
+files:
+  - name: src/Main.kt
+    visible: true
+    text: |-
+      fun main() {
+          val firstArray = readLine()!!.split(' ').map { it }.toTypedArray()
+          val secondArray = readLine()!!.split(' ').map { it }.toTypedArray()
+          // do not touch the lines above
+          // write your code here
+      
+      }
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/11486#comment
+status: Solved
+record: -1
+submission_language: kotlin

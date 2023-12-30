@@ -1,0 +1,31 @@
+<h2>Functional decomposition</h2>
+<div class="step-text">
+<p>Functional decomposition is a process in software development where a complex system is broken down into simpler, easier-to-manage components, also known as functions or modules. This method is essential for understanding, maintaining, and improving software by separating functionalities; this encourages code reuse and testing.</p><p>For example, imagine a Kotlin function that deals with a list of items:</p><pre><code class="language-kotlin">
+fun processItems(items: List&lt;Item&gt;) {
+    items.forEach { processItem(it) }
+}
+
+fun processItem(item: Item) {
+    // Logic to process a single item
+}
+    </code></pre><p>In this case, <code class="language-kotlin">processItems</code> simplifies the job of handling a collection by breaking it down into individual item processing, which <code class="language-kotlin">processItem</code> takes care of. This split makes it easier to understand and test each part's function separately.</p> <h5 id="basic-principles-of-functional-decomposition-in-kotlin">Basic principles of functional decomposition in Kotlin</h5><p>This method is in line with Kotlin's support for the functional programming style. Here are some fundamental concepts:</p><ol><li><p><strong>Pure Functions:</strong> The result of a pure function only depends on its input values and has no noticeable side effects. This predictability makes it simpler to understand what the function will do.</p><pre><code class="language-kotlin">
+fun add(a: Int, b: Int): Int {
+    return a + b // Pure function
+}
+            </code></pre></li><li><p><strong>Immutability:</strong> Once created, immutable data can't be altered. This prevents issues with shared states and makes concurrent environments less risky.</p><pre><code class="language-kotlin">
+val list = listOf(1, 2, 3) // Immutable list
+            </code></pre></li><li><p><strong>Higher-Order Functions:</strong> Kotlin functions can take other functions as parameters or return functions, making the code more modular and reusable.</p><pre><code class="language-kotlin">
+fun applyOperation(a: Int, b: Int, operation: (Int, Int) -&gt; Int): Int {
+    return operation(a, b) // Higher-order function usage
+}
+
+val sum = applyOperation(2, 3, ::add) // Passes ::add as a parameter
+            </code></pre></li></ol><p>Following these principles allows Kotlin developers to create code that's easier to test, maintain, and expand.</p> <h5 id="functional-design-patterns-in-kotlin">Functional Design Patterns in Kotlin</h5><p>These patterns assist in simplifying complex situations, a process known as functional decomposition, which enhances code organization and maintenance.</p> <h5 id="monads">Monads</h5><p>Monads are structures that wrap computation logic. In Kotlin, the <code class="language-kotlin">Result</code> type is a monad that can hold a value or an exception. Monads let you link operations together while handling errors smoothly.</p><pre><code class="language-kotlin">val result: Result&lt;Int&gt; = Result.runCatching { someRiskyOperation() }
+result.map { value -&gt; doSomethingWith(value) }
+</code></pre> <h5 id="functors">Functors</h5><p>Functors are structures that can be mapped over, much like a <code class="language-kotlin">List</code> in Kotlin. They apply a function to wrapped values without changing the actual structure.</p><pre><code class="language-kotlin">val numbers = listOf(1, 2, 3)
+val squared = numbers.map { it * it } // Functor usage
+</code></pre> <h5 id="tail-recursion">Tail Recursion</h5><p>Tail Recursion is a pattern where a function calls itself at the end of its operation, allowing the compiler to optimize the call stack. Kotlin supports tail recursion with the <code class="language-kotlin">tailrec</code> modifier.</p><pre><code class="language-kotlin">tailrec fun factorial(n: Int, acc: Int = 1): Int {
+    return if (n == 1) acc else factorial(n - 1, n * acc)
+}
+</code></pre><p>These patterns enhance functional decomposition by providing structured ways to handle data and computations, making the code more predictable and simpler to understand. Kotlin's support for these patterns enables developers to write concise and straightforward code, embracing the best of functional programming.</p> <h5 id="conclusion">Conclusion</h5><p>Functional decomposition in Kotlin is an essential tactic for managing software complexity by simplifying complex situations into easier-to-manage functions. Kotlin's language features like higher-order functions, lambdas, inline functions, extension functions, and functional design patterns like monads, functors, and tail recursion support and strengthen this approach. By following principles like pure functions, immutability, and higher-order functions, Kotlin developers can create code that's easier to understand, test, and maintain.</p>
+</div>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="delegatedBuild" value="false" />
+        <option name="distributionType" value="WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="#JAVA_INTERNAL" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Flashcards (Kotlin)/task" />
+            <option value="$PROJECT_DIR$/Topics/Arrays/Basic operations" />
+            <option value="$PROJECT_DIR$/Topics/Arrays/Initializing an array of characters" />
+            <option value="$PROJECT_DIR$/Topics/Arrays/Initializing an array of integers" />
+            <option value="$PROJECT_DIR$/Topics/Arrays/Initializing an array of longs" />
+            <option value="$PROJECT_DIR$/Topics/Arrays/Printing the last element" />
+            <option value="$PROJECT_DIR$/Topics/Arrays/The first element of an array" />
+            <option value="$PROJECT_DIR$/Topics/Arrays/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Constructors/Bank account" />
+            <option value="$PROJECT_DIR$/Topics/Constructors/Class members to initialize objects" />
+            <option value="$PROJECT_DIR$/Topics/Constructors/Correct declaration" />
+            <option value="$PROJECT_DIR$/Topics/Constructors/Find the error" />
+            <option value="$PROJECT_DIR$/Topics/Constructors/How many primary constructors" />
+            <option value="$PROJECT_DIR$/Topics/Constructors/Implicit constructor" />
+            <option value="$PROJECT_DIR$/Topics/Constructors/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Data class/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Data class/toString() modification" />
+            <option value="$PROJECT_DIR$/Topics/Functional decomposition/Create a full name" />
+            <option value="$PROJECT_DIR$/Topics/Functional decomposition/Example of functional decomposition" />
+            <option value="$PROJECT_DIR$/Topics/Functional decomposition/How to improve a compound program" />
+            <option value="$PROJECT_DIR$/Topics/Functional decomposition/Password decomposition" />
+            <option value="$PROJECT_DIR$/Topics/Functional decomposition/Roots of quadratic equation" />
+            <option value="$PROJECT_DIR$/Topics/Functional decomposition/Some exceptions" />
+            <option value="$PROJECT_DIR$/Topics/Functional decomposition/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Functional decomposition/What are the advantages of decomposing" />
+            <option value="$PROJECT_DIR$/Topics/Inheritance/Fix bugs" />
+            <option value="$PROJECT_DIR$/Topics/Inheritance/Keyword" />
+            <option value="$PROJECT_DIR$/Topics/Inheritance/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Named arguments/Correct invocations" />
+            <option value="$PROJECT_DIR$/Topics/Named arguments/Declarations" />
+            <option value="$PROJECT_DIR$/Topics/Named arguments/Determine the result" />
+            <option value="$PROJECT_DIR$/Topics/Named arguments/Find the correct invocations" />
+            <option value="$PROJECT_DIR$/Topics/Named arguments/Greeting" />
+            <option value="$PROJECT_DIR$/Topics/Named arguments/Invocations" />
+            <option value="$PROJECT_DIR$/Topics/Named arguments/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Named arguments/URL" />
+            <option value="$PROJECT_DIR$/Topics/Scopes/Code review" />
+            <option value="$PROJECT_DIR$/Topics/Scopes/Cyclist" />
+            <option value="$PROJECT_DIR$/Topics/Scopes/Power and scopes" />
+            <option value="$PROJECT_DIR$/Topics/Scopes/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Scopes/Unlucky one" />
+            <option value="$PROJECT_DIR$/Topics/String arrays/Adding arrays" />
+            <option value="$PROJECT_DIR$/Topics/String arrays/Adding values" />
+            <option value="$PROJECT_DIR$/Topics/String arrays/Change the existing values" />
+            <option value="$PROJECT_DIR$/Topics/String arrays/Empty" />
+            <option value="$PROJECT_DIR$/Topics/String arrays/Help the Lord Commander" />
+            <option value="$PROJECT_DIR$/Topics/String arrays/Initialization" />
+            <option value="$PROJECT_DIR$/Topics/String arrays/Printing an array" />
+            <option value="$PROJECT_DIR$/Topics/String arrays/Theory" />
+            <option value="$PROJECT_DIR$/Topics/String arrays/Yet another array" />
+            <option value="$PROJECT_DIR$/Topics/The main() function/Change program arguments" />
+            <option value="$PROJECT_DIR$/Topics/The main() function/Comprehension" />
+            <option value="$PROJECT_DIR$/Topics/The main() function/Fix the program" />
+            <option value="$PROJECT_DIR$/Topics/The main() function/One after another" />
+            <option value="$PROJECT_DIR$/Topics/The main() function/Printing arguments" />
+            <option value="$PROJECT_DIR$/Topics/The main() function/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Working with strings/Correct operations" />
+            <option value="$PROJECT_DIR$/Topics/Working with strings/Last symbol" />
+            <option value="$PROJECT_DIR$/Topics/Working with strings/Length check" />
+            <option value="$PROJECT_DIR$/Topics/Working with strings/Name Card" />
+            <option value="$PROJECT_DIR$/Topics/Working with strings/Operations and truth" />
+            <option value="$PROJECT_DIR$/Topics/Working with strings/Statements" />
+            <option value="$PROJECT_DIR$/Topics/Working with strings/The information about a person" />
+            <option value="$PROJECT_DIR$/Topics/Working with strings/The same line" />
+            <option value="$PROJECT_DIR$/Topics/Working with strings/Theory" />
+            <option value="$PROJECT_DIR$/Topics/toString()/Inheritance" />
+            <option value="$PROJECT_DIR$/Topics/toString()/Mochaccino" />
+            <option value="$PROJECT_DIR$/Topics/toString()/Number of cups" />
+            <option value="$PROJECT_DIR$/Topics/toString()/Tea" />
+            <option value="$PROJECT_DIR$/Topics/toString()/Theory" />
+            <option value="$PROJECT_DIR$/Topics/toString()/User Information" />
+            <option value="$PROJECT_DIR$/util" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

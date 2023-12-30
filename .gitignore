@@ -1,0 +1,9 @@
+# Project exclude paths
+/.gradle/
+/Flashcards (Kotlin)/task/build/
+/Flashcards (Kotlin)/task/out/
+/Flashcards (Kotlin)/task/out/production/classes/
+/Topics/Inheritance/Fix bugs/out/
+/Topics/Inheritance/Fix bugs/out/production/classes/
+/Topics/The main() function/Printing arguments/out/
+/Topics/The main() function/Printing arguments/out/production/classes/

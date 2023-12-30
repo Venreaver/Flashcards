@@ -1,0 +1,49 @@
+<h2>Constructors</h2>
+<div class="step-text">
+<p>In Kotlin, constructors are special functions used to set up new instances of a class. They are responsible for establishing the initial state of an object when it's created. Kotlin provides two kinds of constructors: primary and secondary.</p> <h5 id="purpose-of-constructors">Purpose of Constructors</h5><p>Constructors in Kotlin aim to:</p><ul><li><p>Initialize properties with values passed to the constructor.</p></li><li><p>Carry out any initialization logic the class might need.</p></li></ul><p>Kotlin's clean syntax and support for default parameter values often help reduce the need for multiple constructors, leading to more clear and manageable code.</p> <h5 id="types-of-constructors-in-kotlin">Types of Constructors in Kotlin</h5> <h5 id="primary-constructor">Primary Constructor</h5><p>The primary constructor is part of the class header and is declared after the class name:</p><pre><code class="language-kotlin">class Person(val name: String, var age: Int)</code></pre><p>Characteristics of the primary constructor:</p><ul><li><p>It's streamlined and cannot contain any code.</p></li><li><p>Initialization code can be placed in initializer blocks, prefixed with <code class="language-kotlin">init</code>.</p></li></ul><pre><code class="language-kotlin">class Person(val name: String, var age: Int) {
+    init {
+        println("New person instance created: $name, $age")
+    }
+}</code></pre> <h5 id="secondary-constructor">Secondary Constructor</h5><p>Secondary constructors are defined inside the class body using the <code class="language-kotlin">constructor</code> keyword:</p><pre><code class="language-kotlin">class Person {
+    val name: String
+    var age: Int
+
+    constructor(name: String, age: Int) {
+        this.name = name
+        this.age = age
+    }
+}</code></pre><p>Characteristics of secondary constructors:</p><ul><li><p>They are used when you need multiple methods to initialize your class.</p></li><li><p>They must delegate to the primary constructor (if it exists) either directly or indirectly through another secondary constructor.</p></li></ul><pre><code class="language-kotlin">class Person(val name: String, var age: Int) {
+    constructor(name: String) : this(name, 0) {
+        println("Secondary constructor called")
+    }
+}</code></pre><p>Secondary constructors are handy when you need more intricate initialization that can't be covered by the primary constructor.</p> <h5 id="primary-constructor-and-initialization-blocks-in-kotlin">Primary Constructor and Initialization Blocks in Kotlin</h5><p>In Kotlin, the primary constructor is part of the class header and is declared after the class name. It can have parameters which can be used for initializing the class properties directly or within an <code class="language-kotlin">init</code> block.</p><p>Here's how to define a primary constructor:</p><pre><code class="language-kotlin">class Person(val name: String, var age: Int) {
+    // Class body
+}</code></pre><p>In the above example, the <code class="language-kotlin">Person</code> class has a primary constructor with two parameters, <code class="language-kotlin">name</code> and <code class="language-kotlin">age</code>. The <code class="language-kotlin">val</code> and <code class="language-kotlin">var</code> keywords indicate that <code class="language-kotlin">name</code> and <code class="language-kotlin">age</code> are properties of the class.</p><p>For more complex setup needs, Kotlin provides <code class="language-kotlin">init</code> blocks. These blocks run in the order they appear in the class body, interleaved with property initializers:</p><pre><code class="language-kotlin">class Person(val name: String, var age: Int) {
+    init {
+        require(age &gt; 0) { "Age must be positive" }
+    }
+}</code></pre><p>In this case, the <code class="language-kotlin">init</code> block contains a check to confirm the age is positive. If the requirement is not met, an <code class="language-kotlin">IllegalArgumentException</code> will be thrown.</p><p>Remember, if you have multiple <code class="language-kotlin">init</code> blocks, they are executed in order:</p><pre><code class="language-kotlin">class Person(val name: String, var age: Int) {
+    init {
+        println("First initializer block")
+    }
+
+    // Property initializer
+    val isAdult = age &gt;= 18
+
+    init {
+        println("Second initializer block with isAdult: $isAdult")
+    }
+}</code></pre><p>The primary constructor cannot contain any code. Initialization code should be placed in <code class="language-kotlin">init</code> blocks or directly in property initializers.</p> <h5 id="secondary-constructors-in-kotlin">Secondary Constructors in Kotlin</h5><p>Kotlin allows for the definition of one primary constructor and one or more secondary constructors in a class. Secondary constructors are less streamlined than the primary constructor and are defined with the <code class="language-kotlin">constructor</code> keyword.</p><p>Secondary constructors provide additional ways to set up an object when the primary constructor isn't enough or when you need to perform extra initialization steps.</p><p>Here's how to create a secondary constructor:</p><pre><code class="language-kotlin">class Person(val name: String) {
+    var age: Int
+
+    // Primary constructor
+    init {
+        age = 0
+    }
+
+    // Secondary constructor
+    constructor(name: String, age: Int): this(name) {
+        this.age = age
+    }
+}</code></pre><p>In the example above, the secondary constructor takes two parameters and delegates to the primary constructor using <code class="language-kotlin">this(name)</code>. After the primary constructor has been called, the secondary constructor body is executed, allowing for additional initialization, such as setting the <code class="language-kotlin">age</code> property.</p><p>Secondary constructors must always delegate to the primary constructor, directly or indirectly, to ensure that initialization of the base class is completed before the secondary constructor's body is executed.</p> <h5 id="conclusion">Conclusion</h5><p>Constructors in Kotlin are crucial for initializing class instances, and the language provides two types - primary and secondary constructors. The primary constructor is a part of the class header and makes for concise class definitions, with the option to use <code class="language-kotlin">init</code> blocks for additional setup logic. Secondary constructors offer more flexibility and are defined within the class body, requiring explicit delegation to the primary constructor.</p>
+</div>
